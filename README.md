@@ -20,13 +20,6 @@ public void Test()
 
 ## Available methods:
 ```csharp
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace FibonacciHeap
-{
     public TValue Min {}
 
     public bool IsEmpty();
