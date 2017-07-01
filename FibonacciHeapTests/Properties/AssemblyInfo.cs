@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Was.FibonacciHeapTests")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Was.FibonacciHeapTests")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTitle("FibonacciHeapTests")]
+[assembly: AssemblyDescription("FibonacciHeapTests")]
+[assembly: AssemblyConfiguration("FibonacciHeapTests")]
+[assembly: AssemblyCompany("Hämmer Electronics")]
+[assembly: AssemblyProduct("FibonacciHeapTests")]
+[assembly: AssemblyCopyright("Copyright © Hämmer Electronics")]
+[assembly: AssemblyTrademark("FibonacciHeapTests")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
