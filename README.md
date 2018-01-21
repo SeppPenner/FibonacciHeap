@@ -2,7 +2,7 @@ FibonacciHeap
 ====================================
 
 FibonacciHeap is an assembly/ library to build and use Fibonacci heaps in C#.
-The assembly was written and tested in .Net 4.6.2.
+The assembly was written and tested in .Net 4.7.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/4r73mgd973f5bek9?svg=true)](https://ci.appveyor.com/project/SeppPenner/fibonacciheap)
 
