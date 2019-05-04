@@ -2,9 +2,14 @@ FibonacciHeap
 ====================================
 
 FibonacciHeap is an assembly/ library to build and use Fibonacci heaps in C#.
-The assembly was written and tested in .Net 4.7.
+The assembly was written and tested in .Net 4.8.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/4r73mgd973f5bek9?svg=true)](https://ci.appveyor.com/project/SeppPenner/fibonacciheap)
+[![GitHub issues](https://img.shields.io/github/issues/SeppPenner/FibonacciHeap.svg)](https://github.com/SeppPenner/FibonacciHeap/issues)
+[![GitHub forks](https://img.shields.io/github/forks/SeppPenner/FibonacciHeap.svg)](https://github.com/SeppPenner/FibonacciHeap/network)
+[![GitHub stars](https://img.shields.io/github/stars/SeppPenner/FibonacciHeap.svg)](https://github.com/SeppPenner/FibonacciHeap/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/FibonacciHeap/master/License.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/FibonacciHeap/badge.svg)](https://snyk.io/test/github/SeppPenner/FibonacciHeap)
 
 ## Basic usage:
 ```csharp
