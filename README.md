@@ -47,4 +47,5 @@ public void Test()
 Change history
 --------------
 
+* **Version 1.0.0.1 (2019-05-05)** : Updated .Net version to 4.8.
 * **Version 1.0.0.0 (2017-01-07)** : 1.0 release.
