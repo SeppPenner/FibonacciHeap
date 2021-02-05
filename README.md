@@ -11,7 +11,7 @@ The assembly was written and tested in .Net 5.0.
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/FibonacciHeap/master/License.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/FibonacciHeap/badge.svg)](https://snyk.io/test/github/SeppPenner/FibonacciHeap)
 
-## Basic usage:
+## Basic usage
 ```csharp
 public void Test()
 {
@@ -23,7 +23,7 @@ public void Test()
 }
 ```
 
-## Available methods:
+## Available methods
 ```csharp
     public TValue Min {}
 
