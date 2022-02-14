@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="FibonacciHeapTests.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,89 +7,83 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace FibonacciHeap.Tests
-{
-    using FibonacciHeap;
+namespace FibonacciHeap.Tests;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
+/// <summary>
+/// A class to test the <see cref="FibonacciHeap{TValue,TPriority}"/> class.
+/// </summary>
+[TestClass]
+public class FibonacciHeapTests
+{
+    /// <summary>
+    /// Checks whether the push action returns the proper minimum value.
+    /// </summary>
+    [TestMethod]
+    public void PushIntegersReturnsProperMinimum()
+    {
+        var heap = new FibonacciHeap<string, int>();
+
+        heap.Push("a", 2);
+        heap.Push("b", 1);
+
+        Assert.AreEqual("b", heap.Pop().Value);
+        Assert.AreEqual("a", heap.Pop().Value);
+    }
 
     /// <summary>
-    /// A class to test the <see cref="FibonacciHeap{TValue,TPriority}"/> class.
+    /// Checks whether the decrease key action returns the proper minimum value.
     /// </summary>
-    [TestClass]
-    public class FibonacciHeapTests
+    [TestMethod]
+    public void DecreaseKeyIntegersReturnsProperMinimum()
     {
-        /// <summary>
-        /// Checks whether the push action returns the proper minimum value.
-        /// </summary>
-        [TestMethod]
-        public void PushIntegersReturnsProperMinimum()
-        {
-            var heap = new FibonacciHeap<string, int>();
+        var heap = new FibonacciHeap<string, int>();
 
-            heap.Push("a", 2);
-            heap.Push("b", 1);
+        var node = heap.Push("a", 20);
+        heap.Push("b", 10);
 
-            Assert.AreEqual("b", heap.Pop().Value);
-            Assert.AreEqual("a", heap.Pop().Value);
-        }
+        heap.DecreaseKey(node, 5);
 
-        /// <summary>
-        /// Checks whether the decrease key action returns the proper minimum value.
-        /// </summary>
-        [TestMethod]
-        public void DecreaseKeyIntegersReturnsProperMinimum()
-        {
-            var heap = new FibonacciHeap<string, int>();
+        Assert.AreEqual("a", heap.Pop().Value);
+        Assert.AreEqual("b", heap.Pop().Value);
+    }
 
-            var node = heap.Push("a", 20);
-            heap.Push("b", 10);
+    /// <summary>
+    /// Checks whether the pop action returns the proper minimum value.
+    /// </summary>
+    [TestMethod]
+    public void PopIntegersReturnsProperMinimum()
+    {
+        var heap = new FibonacciHeap<string, int>();
 
-            heap.DecreaseKey(node, 5);
+        heap.Push("a", 20);
+        heap.Push("b", 10);
 
-            Assert.AreEqual("a", heap.Pop().Value);
-            Assert.AreEqual("b", heap.Pop().Value);
-        }
+        heap.Pop();
 
-        /// <summary>
-        /// Checks whether the pop action returns the proper minimum value.
-        /// </summary>
-        [TestMethod]
-        public void PopIntegersReturnsProperMinimum()
-        {
-            var heap = new FibonacciHeap<string, int>();
+        Assert.AreEqual("a", heap.Pop().Value);
+    }
 
-            heap.Push("a", 20);
-            heap.Push("b", 10);
+    /// <summary>
+    /// Checks whether the pop action returns the proper minimum value with a custom comparer.
+    /// </summary>
+    [TestMethod]
+    public void PopOwnComparerReturnsProperMinimum()
+    {
+        var heap = new FibonacciHeap<string, int>(new ReversedIntComparer());
 
-            heap.Pop();
-            
-            Assert.AreEqual("a", heap.Pop().Value);
-        }
+        heap.Push("a", 20);
+        heap.Push("b", 10);
 
-        /// <summary>
-        /// Checks whether the pop action returns the proper minimum value with a custom comparer.
-        /// </summary>
-        [TestMethod]
-        public void PopOwnComparerReturnsProperMinimum()
-        {
-            var heap = new FibonacciHeap<string, int>(new ReversedIntComparer());
+        Assert.AreEqual("a", heap.MinimumValue);
+    }
 
-            heap.Push("a", 20);
-            heap.Push("b", 10);
-
-            Assert.AreEqual("a", heap.MinimumValue);
-        }
-
-        /// <summary>
-        /// Checks whether the minimum value action throws an exception when the heap is empty.
-        /// </summary>
-        [TestMethod, ExpectedException(typeof(EmptyHeapException))]
-        public void WhenEmptyHeapThrowsException()
-        {
-            var heap = new FibonacciHeap<string, int>();
-            // ReSharper disable once UnusedVariable
-            var min = heap.MinimumValue;
-        }
+    /// <summary>
+    /// Checks whether the minimum value action throws an exception when the heap is empty.
+    /// </summary>
+    [TestMethod, ExpectedException(typeof(EmptyHeapException))]
+    public void WhenEmptyHeapThrowsException()
+    {
+        var heap = new FibonacciHeap<string, int>();
+        _ = heap.MinimumValue;
     }
 }
