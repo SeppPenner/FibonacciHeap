@@ -38,13 +38,4 @@ public class EmptyHeapException : Exception
     public EmptyHeapException(string message, Exception inner) : base(message, inner)
     {
     }
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="EmptyHeapException"/> class.
-    /// </summary>
-    /// <param name="info">The serialization information.</param>
-    /// <param name="context">The context.</param>
-    protected EmptyHeapException(SerializationInfo info, StreamingContext context) : base(info, context)
-    {
-    }
 }
